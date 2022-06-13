@@ -1,0 +1,785 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 1vw;
+    font-family: 'Montserrat',sans-serif;
+    color:white;
+    /*Gradiente de fondo*/  
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e5e5e5+0,2d6491+50,123055+75 */
+    background: #123055; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #2d6491 50%, #123055 75%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#2d6491 50%,#123055 75%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#2d6491 50%,#123055 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#123055',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+
+}
+P{
+    text-align:justify ;
+    padding: 0.6rem ;
+   
+}
+
+h1,h2,h3{
+    font-family: 'Londrina Solid';
+    text-align: center;
+    margin: 0.5rem;
+}
+
+
+/* Barra superior con menu y logo */
+.header-header {
+    background-color:#123055;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0.6em;
+}
+
+
+
+.logo{
+    width: 6em; 
+    height: min-content;
+   
+    margin: 0.6em;
+}
+
+
+nav>ul>a{
+
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    padding:0 0.6em;
+
+}
+
+
+/*Cuando paso con el mouse*/
+nav>ul>a:hover, .mostrar-menu:hover,
+.esconder-menu:hover{
+
+    color:#7ebbec;
+    transition: 0.2s;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 1.5em;
+    padding:0.6em;
+    cursor: pointer;
+    display: none; /*Quiero que se vea solo en la vesion responsive*/
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+
+#check{
+    display:none;
+}
+
+
+.contenedor-portada{
+    display: flex;
+    justify-content:center;    
+}
+
+/*Portada */
+.portada{
+    width: 95vw;
+    padding: 1vw ;
+}
+
+
+/* Aside */
+.lema{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: 12.5em;
+    padding: 10% 2% 10% 2%;
+    margin: 0.6rem;
+    animation-name: back-change;
+    animation-delay:1s;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+    border-radius: 0.6rem;
+}
+
+.lema span{     
+    font-size: 3.1em;
+    align-items: center;
+}
+
+/* Titulos*/
+.title{
+
+    font-family: 'Londrina Solid';
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    text-align: center;   
+    text-shadow: 0.2rem 0.2rem 0.6rem #123055;
+    padding: 0.3em;
+} 
+
+/* Acerca de nosotras seccion*/
+.us-container{
+    display: flex;
+    margin: 0 0.6em 0.6em 0.6em;
+    flex-direction: row;
+}
+.us-container article{
+    margin: 0.6em;
+    flex-direction: column;
+}
+
+.sobre-nosotras{
+    margin-top: 0.6em;
+    background-color:#123055;
+    padding: 0.6em;
+    border-radius: 0.5rem;
+    
+}
+
+.actividades{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+
+.contenedor-act img{
+    position: absolute;
+    transition: opacity 1.5s ease-in-out;
+    border-radius: 0.6rem;
+
+}
+
+.contenedor-act div{
+    background-color: #276292;
+    width: 10em;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 0.5rem rgba(19, 177, 189, 0.5); 
+    border-radius: 0.6rem;
+
+}
+
+.contenedor-act h4{
+    justify-content:flex-start;
+    margin: 0.6em;
+}
+.contenedor-act div:hover{
+    opacity: 0;
+   
+}
+
+.superior img{
+    margin-top: 4vh;
+    width: 10em;
+    height: auto
+}
+/*Seccion grupos de edades*/
+.groups{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.groups span{
+
+    height: 20em; /*alto*/
+    width: 12.5em;
+    margin: 0.6em 1.25em 0.6em 1.25em;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    text-shadow:0 0 0.3rem rgba(0, 0, 0, 0.5);   
+}
+.groups img{
+    width: 100px;
+    height:auto;
+}
+.groups p{
+    text-align: center;
+}
+
+/*Seccion sumate*/
+
+.contacto {
+    display:flex;
+    justify-content: space-around;
+
+}
+ 
+.form, .ubi{
+    display: grid;
+    padding: 3rem; /* espacio alrededor del contenido */
+    gap: 1rem;     /* espacio entre columnas y filas */
+    justify-items: center;
+    margin-top: 1%;
+    align-items: center;
+    
+ }
+.form-container, .map {
+    background-color:#276292;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+ }
+ 
+
+/*--------------------Responsive---------------------------*/
+
+/*Primer corte entre  750px y 960px se esconde el aside y el menu se hace desplegable*/
+@media (max-width:960px) and (min-width:750px) {
+    body{
+        margin: 0;
+    }
+    P{
+        size: vh;
+    }
+    /*Header*/
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height:30vh; 
+        background:#2d6491;
+        right: -100%; /*Para que se vea desde la derecha*/
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100; 
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top:40px;
+        right:40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    
+    /*Aside*/
+    .lema{
+        display: none;
+    }
+
+    /* Acerca de nosotras seccion*/
+    .contenedor-act .inferior{
+        display: none;
+    }
+    .contenedor-act div:hover{
+        opacity:100;
+    }
+}
+
+/*Segundo corte: entre  685px y 750px, las actividades 
+cambian la distribucion y tanto la ubi como el formulario
+forman una columna*/
+@media (max-width:749px) and (min-width:685px){
+    body{
+        margin: 0;
+    }
+    /*Header*/
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height: 50vh; /*Ocupa el 50% de cualquie dispositivo*/
+        background:#2d6491;
+        right: -100%; /*Para que se vea desde la derecha*/
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+       
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top:40px;
+        right:40px;
+
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    /*Aside*/
+    .lema{display: none;}
+
+    /* Acerca de nosotras seccion*/
+    .contenedor-act .inferior{
+        display: none;
+    }
+
+    .contenedor-act div:hover{
+        opacity:100;
+
+    }
+    
+    .actividades{
+        display: grid;
+        row-gap:10vh;
+        grid-template-columns: auto auto;  
+       
+    }
+    .contenedor-act div {
+        width: 30vw;
+        height: 30vw;
+    }
+   
+    .superior img{
+        padding: 0.6em;
+        width: 25vw;
+        height:auto; 
+    }
+
+    /*Seccion sumarte*/
+    
+
+    .contacto {
+        display:grid;
+        row-gap:10vh;
+            
+    }
+        
+       
+}
+/*3er corte los grupos de edades forman dos filas de 2 columnas*/
+@media (max-width:684px) and (min-width:500px){
+    body{
+        margin: 0;
+    }
+    /*Header*/
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height: 50vh; /*Ocupa el 50% de cualquie dispositivo*/
+        background:#2d6491;
+        right: -100%; /*Para que se vea desde la derecha*/
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+       
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top:40px;
+        right:40px;
+
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    /* Aside*/
+    .lema{display: none;}
+
+    /* Acerca de nosotras seccion*/
+    .contenedor-act .inferior{
+        display: none;
+    }
+
+    .contenedor-act div:hover{
+        opacity:100;
+
+    }
+    
+    .actividades{
+        display: grid; 
+        row-gap:10vh;
+        column-gap: 0vh;
+        grid-template-columns: auto auto;  
+       
+    }
+    .superior {
+
+        width: 30vw;
+        height: 30vw;
+    }
+    /*Seccion sumarte*/
+    
+    .contacto {
+        display:grid;
+        row-gap:10vh;
+    }
+      /*Seccion grupos de edades*/
+    .groups{
+       display: grid;
+       row-gap:10vh;
+       column-gap: 0vh;
+       grid-template-columns: auto auto;  
+    
+    }
+   
+
+}
+
+/*Cuarto corte: entre  380px y 499px los grupos de edades 
+forman una colunma */
+
+@media (max-width:499px)and (min-width:380px){
+    body{
+        margin: 0;
+    }
+    /*Header*/
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height: 50vh; /*Ocupa el 50% de cualquie dispositivo*/
+        background:#2d6491;
+        right: -100%; /*Para que se vea desde la derecha*/
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+       
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top:40px;
+        right:40px;
+
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    /* Aside*/
+    .lema{display: none;}
+
+    /* Acerca de nosotras seccion*/
+    .contenedor-act .inferior{
+        display: none;
+    }
+
+    .contenedor-act div:hover{
+        opacity:100;
+
+    }
+    
+    .actividades{
+        display: grid; 
+        row-gap:10vh;
+        column-gap: 0vh;
+        grid-template-columns: auto auto;  
+       
+    }
+    .superior {
+
+        width: 30vw;
+        height: 30vw;
+    }
+    /*Seccion sumarte*/
+    
+    .contacto {
+        display:grid;
+        row-gap:10vh;
+    }
+
+    /*Seccion grupos de edades*/
+    .groups{
+        flex-direction: column;
+
+    
+    }
+    .groups span{
+
+        display: flex;
+        flex-direction: column;
+        height:auto; /*alto*/
+        width: 90vw;    
+        
+       
+    }
+    
+      
+    .group h2{
+        display:none;
+    }
+    .group h3{
+        font-size: 5vh;
+    }
+    .group img{
+        width:40vw;
+        height:auto;
+        padding: 0 25%;
+        
+    }
+
+    iframe{
+        width:80vw;
+        height:auto;
+
+    }
+
+    
+}
+
+/*Cuarto corte: entre  200px y 379px lasactividades forman una colunma */
+@media (max-width:379px)and (min-width:200px){
+    body{
+        margin: 0;
+    }
+    /*Header*/
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width:100%;
+        height: 50vh; /*Ocupa el 50% de cualquie dispositivo*/
+        background:#2d6491;
+        right: -100%; /*Para que se vea desde la derecha*/
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+       
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top:40px;
+        right:40px;
+
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    /* Aside*/
+    .lema{display: none;}
+
+    /* Acerca de nosotras seccion*/
+    .contenedor-act .inferior{
+        display: none;
+    }
+
+    .contenedor-act div:hover{
+        opacity:100;
+
+    }
+    
+    .actividades{
+        display: grid; 
+        row-gap:10vh;
+        column-gap: 0vh;
+        grid-template-columns:auto;  
+       
+    }
+    .superior {
+
+        width: 30vw;
+        height: 30vw;
+    }
+    /*Seccion sumarte*/
+    
+    .contacto {
+        display:grid;
+        row-gap:10vh;
+    }
+
+    /*Seccion grupos de edades*/
+    .groups{
+        flex-direction: column;
+
+    
+    }
+    .groups span{
+
+        display: flex;
+        flex-direction: column;
+        height:auto; /*alto*/
+        width: 90vw;    
+        
+       
+    }
+    
+      
+    .group h2{
+        display:none;
+    }
+    .group h3{
+        font-size: 5vh;
+    }
+    .group img{
+        width:40vw;
+        height:auto;
+        padding: 0 25%;
+        
+    }
+
+    iframe{
+        width:80vw;
+        height:auto;
+
+    }
+    .social{
+        display: grid; 
+        row-gap:10vh;
+        column-gap: 0vh;
+        grid-template-columns:auto auto;  
+       
+    }
+    
+}
+
+
+
+
+
+
+/*-------------------- Form ----------------------*/
+form input,form select,form textarea,
+form fieldset,
+form optgroup,
+form label,
+.StripeElement {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 100%;
+    color:#646363;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+form label,
+form legend {
+    font-size: 0.825rem;
+    margin-bottom: 0.5rem;
+}
+
+
+form input,
+form select,
+form textarea,
+.StripeElement {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.75em 1rem;
+    margin-bottom: 1.5rem;
+}
+form input:focus,
+form select:focus,
+form textarea:focus,
+.StripeElement:focus {
+background-color: white;
+outline-style: solid;
+outline-width: thin;
+outline-color: gray;
+outline-offset: -1px;
+}
+form [type="text"],
+form [type="email"],
+.StripeElement {
+    width: 100%;
+}
+form [type="button"],
+form [type="submit"],
+form [type="reset"] {
+    width: auto;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+form [type="button"]:focus,
+form [type="submit"]:focus,
+form [type="reset"]:focus {
+    outline: none;
+}
+    
+form select {
+      text-transform: none;
+}
+
+
+
+/*--------Footer-----------*/
+footer{
+    display: flex;
+    flex-direction:column; 
+    justify-content: center;
+    background-color:#276292;
+    padding: 1rem;
+    align-items: center;
+    
+}
+
+
+.social i{
+   margin: 2rem;  
+   background-color: #123055;  
+   padding: 0.6em;
+   border-radius: 100%;
+   align-items: center;
+}
+
+
+/*----------ANIMACIONES----------*/
+@keyframes back-change {
+
+    0% {background-color:#f5f261}
+    25% {background-color:#62ccfd}
+    50% {background-color:#31c449}
+    75% {background-color:#be2a2a}
+    100% {background-color: #123055;}  
+}
+
+
+
