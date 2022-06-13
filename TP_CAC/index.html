@@ -172,21 +172,21 @@
                     <div class="form-container">
 
                         <p style="text-align: center;">Consultanos para sumarte</p>
-                        <form name="form" action="" method="POST" id="formulario" netlify>
+                        <form id="form">
 
+                            
+                            <input type="text" id=name placeholder="Nombre" onsubmit="return validar();">
 
-                            <label for="nombre" style="color:white"> <strong>Nombre</strong> </label>
-                            <input type="text" name="nombre"  placeholder="Nombre" onsubmit="return validar();">
+                            
+                            <input type="text" id="email" placeholder="tumail@aca.com"  onsubmit="return validar();"  >
 
-                            <label for="correo" style="color:white"><strong>Mail</strong></label>
-                            <input type="email" name="correo"  placeholder="tumail@aca.com"  onsubmit="return validar();"  >
+                        
+                            <textarea rows="5" id="mensaje"  placeholder="Escriba aqui..." onsubmit="return validar();"></textarea>
 
-                            <label for="mensaje" style="color:white"> <strong> Mensaje</strong></label>
-                            <textarea rows="5" name="mensaje"  placeholder="Escriba aqui..." onsubmit="return validar();"></textarea>
-
-                            <button onclick="validar();" type="submit" style="color:#646363"> <strong>Enviar</strong> </button>
+                            <button onclick="validar();"class="boton" type="submit" style="color:#646363"> <strong>Enviar</strong> </button>
                         
                         </form>
+                        
 
                     </div>    
     
