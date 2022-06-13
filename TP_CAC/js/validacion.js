@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
 function validarForm(evento) {
     evento.preventDefault();
     var name = document.getElementById('name').value;
-    var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    
     if(name.length == 0) {
         alert("Por favor ingrese un nombre en el formulario de contacto")
         return;
     }
     var email = document.getElementById('email').value;
+    var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     if (expReg.test(email)==false){
          alert("Por favor ingrese una direccion de mail valida")
          return;
