@@ -248,6 +248,77 @@ nav>ul>a:hover, .mostrar-menu:hover,
  }
  
 
+/*-------------------- Form ----------------------*/
+form input,form select,
+form textarea{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 100%;
+    color:#646363;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+form legend{
+    font-size: 0.825rem;
+    margin-bottom: 0.5rem;
+}
+
+
+form input,
+form textarea{
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.75em 1rem;
+    margin-bottom: 1.5rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+background-color: white;
+outline-style: solid;
+outline-width: thin;
+outline-color: gray;
+outline-offset: -1px;
+}
+
+.boton{
+    background-color:white;
+    border:none;
+    border-radius:0.3em;    
+    width: 10vw;
+    height: 5vh;
+}
+
+.boton:hover{
+    cursor: pointer;
+    background-color: #76bdff;
+}
+
+/*--------Footer-----------*/
+footer{
+    display: flex;
+    flex-direction:column; 
+    justify-content: center;
+    background-color:#276292;
+    padding: 1rem;
+    align-items: center;
+    
+}
+
+
+.social i{
+   margin: 2rem;  
+   background-color: #123055;  
+   padding: 0.6em;
+   border-radius: 100%;
+   align-items: center;
+}
+
+
 /*--------------------Responsive---------------------------*/
 
 /*Primer corte entre  750px y 960px se esconde el aside y el menu se hace desplegable*/
@@ -675,100 +746,6 @@ forman una colunma */
     
 }
 
-
-
-
-
-
-/*-------------------- Form ----------------------*/
-form input,form select,form textarea,
-form fieldset,
-form optgroup,
-form label,
-.StripeElement {
-    font-family: 'Montserrat',sans-serif;
-    font-size: 100%;
-    color:#646363;
-    border-radius: 0;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-form label,
-form legend {
-    font-size: 0.825rem;
-    margin-bottom: 0.5rem;
-}
-
-
-form input,
-form select,
-form textarea,
-.StripeElement {
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 0.75em 1rem;
-    margin-bottom: 1.5rem;
-}
-form input:focus,
-form select:focus,
-form textarea:focus,
-.StripeElement:focus {
-background-color: white;
-outline-style: solid;
-outline-width: thin;
-outline-color: gray;
-outline-offset: -1px;
-}
-form [type="text"],
-form [type="email"],
-.StripeElement {
-    width: 100%;
-}
-form [type="button"],
-form [type="submit"],
-form [type="reset"] {
-    width: auto;
-    cursor: pointer;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-}
-form [type="button"]:focus,
-form [type="submit"]:focus,
-form [type="reset"]:focus {
-    outline: none;
-}
-    
-form select {
-      text-transform: none;
-}
-
-
-
-/*--------Footer-----------*/
-footer{
-    display: flex;
-    flex-direction:column; 
-    justify-content: center;
-    background-color:#276292;
-    padding: 1rem;
-    align-items: center;
-    
-}
-
-
-.social i{
-   margin: 2rem;  
-   background-color: #123055;  
-   padding: 0.6em;
-   border-radius: 100%;
-   align-items: center;
-}
 
 
 /*----------ANIMACIONES----------*/
