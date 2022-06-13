@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function validarForm(evento) {
     evento.preventDefault();
     var name = document.getElementById('name').value;
-    var expReg= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/
+    var expReg= /^\w+([\.-_]?\w+)*@\w+([\.-_]?\w+)*(\.\w{2,3,4})+$/
     if(name.length == 0) {
         alert("Por favor ingrese un nombre en el formulario de contacto")
         return;
@@ -20,7 +20,7 @@ function validarForm(evento) {
         return;
     }
     alert('¡Gracias! Su mensaje fue enviado con exito')
-    form.submit();
+    this.submit();
 }
 
    
